@@ -81,12 +81,19 @@ export const StreamNow = styled.a`
   color: var(--darkblack);
   border-radius: 5rem;
   text-decoration: none;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
 `
 
 export const WatchOn = styled.p`
   font-size: 19px;
   font-weight: 600;
-  margin-top: 90px;
+  margin: 90px 0;
   color: var(--white);
 `
 
@@ -102,7 +109,7 @@ export const Info = styled.p`
 
   @media ${device.desktop} {
     font-size: 48px;
-    padding: 20px 100px;
+    padding: 20px 200px;
   }
 
   @media ${device.laptop} {

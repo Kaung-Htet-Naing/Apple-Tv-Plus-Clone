@@ -10,6 +10,9 @@ import {
 } from './index.styled'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import styles from '@/styles/Home.module.scss'
+import { OfferWrapper } from './offer/index.styled'
+import Offer from './offer'
+import { offers, infos } from 'data/data'
 
 const Main = () => {
   const { height, width }: any = useWindowDimensions()
@@ -23,37 +26,39 @@ const Main = () => {
             <br />
             Only On Apple TV+
           </Title>
-          <StreamNow>Stream Now</StreamNow>
+          <StreamNow href="https://tv.apple.com/channel/tvs.sbd.4000?itscg=10000&itsct=atv-tv_op-nav_wch-ctr-210111">
+            Stream Now
+          </StreamNow>
           <WatchOn>Watch on the Apple TV app</WatchOn>
         </div>
       </InfoContainer>
       <InfoWrapper>
-        <AnimationOnScroll
-          animateIn={styles.animate_slide_top}
-          animateOut={styles.animate_slide_top_reverse}
-          offset={0}
-        >
-          <Info>New Apple Originals every month.</Info>
-        </AnimationOnScroll>
+        {infos.map(({ name }, index) => {
+          return (
+            <AnimationOnScroll
+              animateIn={styles.animate_slide_top}
+              animateOut={styles.animate_slide_top_reverse}
+              offset={0}
+            >
+              <Info>{name}</Info>
+            </AnimationOnScroll>
+          )
+        })}
 
-        <AnimationOnScroll
-          animateIn={styles.animate_slide_top}
-          animateOut={styles.animate_slide_top_reverse}
-          offset={0}
-        >
-          <Info>
-            Stream on the Apple TV app on Apple devices, smart TVs, consoles, or
-            sticks.
-          </Info>
-        </AnimationOnScroll>
-
-        <AnimationOnScroll
-          animateIn={styles.animate_slide_top}
-          animateOut={styles.animate_slide_top_reverse}
-          offset={0}
-        >
-          <Info> Share Apple TV+ with your family.</Info>
-        </AnimationOnScroll>
+        <OfferWrapper>
+          {offers.map((value, index) => {
+            return (
+              <Offer
+                eyebrow={value.eyebrow}
+                headline={value.heading}
+                body={value.body}
+                learnMore={value.learnMore}
+                buttonName={value.button.name}
+                buttonLink={value.button.link}
+              />
+            )
+          })}
+        </OfferWrapper>
       </InfoWrapper>
     </>
   )
