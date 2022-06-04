@@ -1,0 +1,17 @@
+@import './variables';
+
+:root {
+  --black: #{$black};
+  --darkblack: #{$darkBlack};
+  --gray: #{$gray};
+  --white: #{$white};
+  --blue: #{$blue};
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #{$white};
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
