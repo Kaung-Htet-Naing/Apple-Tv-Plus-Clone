@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "babel-plugin-styled-components": "^2.0.7",
     "next": "12.1.6",
     "react": "18.1.0",
+    "react-animation-on-scroll": "^5.1.0",
+    "react-device-detect": "^2.2.2",
     "react-dom": "18.1.0",
     "styled-components": "^5.3.5"
   },

@@ -18,6 +18,7 @@ export const HeadingWrapper = styled.div`
   @media ${device.laptop} {
     padding: 0;
   }
+  z-index: 9999;
 `
 export const Heading = styled.div`
   /* background-color: var(--black); */
