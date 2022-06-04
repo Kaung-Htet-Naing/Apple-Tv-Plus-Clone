@@ -86,4 +86,7 @@ export const OfferButton = styled.a`
   padding: 12px 22px;
   border-radius: 5rem;
   text-decoration: none;
+  &:hover {
+    opacity: 0.5;
+  }
 `
