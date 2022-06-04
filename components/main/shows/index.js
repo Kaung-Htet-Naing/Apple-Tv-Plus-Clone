@@ -6,6 +6,7 @@ import { shows } from 'data/data'
 import Marquee, { Motion, randomIntFromInterval } from 'react-marquee-slider'
 import Card from '@/components/layout/card/Card'
 import { useState } from 'react'
+import { Button, ButtonWrapper } from './index.styled'
 
 const Shows = () => {
   const [firstMarqueeSpeed, setFirstMarqueeSpeed] = useState(30)
@@ -92,6 +93,11 @@ const Shows = () => {
           })}
         </Marquee>
       </div>
+      <ButtonWrapper>
+        <Button href="https://tv.apple.com/channel/tvs.sbd.4000?itscg=10000&itsct=atv-0-tv_ovp-prc_full-apl-avl-200306">
+          See full lineup
+        </Button>
+      </ButtonWrapper>
     </div>
   )
 }
