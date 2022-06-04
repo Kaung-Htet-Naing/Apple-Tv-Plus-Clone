@@ -39,6 +39,7 @@ const Main = () => {
               animateIn={styles.animate_slide_top}
               animateOut={styles.animate_slide_top_reverse}
               offset={0}
+              key={index}
             >
               <Info>{name}</Info>
             </AnimationOnScroll>
@@ -49,6 +50,7 @@ const Main = () => {
           {offers.map((value, index) => {
             return (
               <Offer
+                key={index}
                 eyebrow={value.eyebrow}
                 headline={value.heading}
                 body={value.body}
