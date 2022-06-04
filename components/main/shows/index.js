@@ -1,9 +1,16 @@
 import ShowCard from '@/components/layout/card/ShowCard'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import times from 'lodash/times'
 import { shows } from 'data/data'
+import Marquee, { Motion, randomIntFromInterval } from 'react-marquee-slider'
+import Card from '@/components/layout/card/Card'
+import { useState } from 'react'
 
 const Shows = () => {
+  const [firstMarqueeSpeed, setFirstMarqueeSpeed] = useState(30)
+  const [secondMarqueeSpeed, setSecondMarqueeSpeed] = useState(40)
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -49,6 +56,42 @@ const Shows = () => {
           )
         })}
       </Carousel>
+      <div>
+        <Marquee
+          velocity={firstMarqueeSpeed}
+          minScale={0.7}
+          resetAfterTries={200}
+        >
+          {shows.map((value, index) => {
+            return (
+              <Card
+                key={index}
+                image={value.image}
+                button={value.button}
+                streamLink={value.streamLink}
+              />
+            )
+          })}
+        </Marquee>
+      </div>
+      <div>
+        <Marquee
+          velocity={secondMarqueeSpeed}
+          minScale={0.7}
+          resetAfterTries={200}
+        >
+          {shows.map((value, index) => {
+            return (
+              <Card
+                key={index}
+                image={value.image}
+                button={value.button}
+                streamLink={value.streamLink}
+              />
+            )
+          })}
+        </Marquee>
+      </div>
     </div>
   )
 }

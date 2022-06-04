@@ -23,6 +23,12 @@
       "@/store/*": ["store/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/main/shows/index.js",
+    "components/main/shows/index.js"
+  ],
   "exclude": ["node_modules"]
 }
