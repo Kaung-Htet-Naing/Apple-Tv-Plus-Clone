@@ -41,6 +41,7 @@ export const offers = [
 
 export const shows = [
   {
+    name:'Physical',
     image: `https://is3-ssl.mzstatic.com/image/thumb/Features112/v4/1f/39/b4/1f39b4ec-c29e-2fe6-58a1-bd60bd0d03c6/f3538258-74f7-467a-bd2d-3cc394f2108d.png/1839x766sr.jpg`,
     showTime: 'New Episodes Fridays',
     logo: 'https://is3-ssl.mzstatic.com/image/thumb/Fm2yPz0WQFYHfjSz8lRrUw/250x62.png',
@@ -51,16 +52,18 @@ export const shows = [
       'https://tv.apple.com/us/show/physical/umc.cmc.6gdc6v4vwyaab7klocftv2s10?itscg=10000&itsct=atv-0-tv_ovp-carousel-apl-200528',
   },
   {
+    name: "Prehistoric Planet",
     image: `https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/79/d2/f3/79d2f33d-0c47-4eff-a727-3bf3c2958b46/af13f83a-2b5d-4573-8ea0-7328dcce3214.png/735x1590.jpg`,
     showTime: 'New Release',
     logo: 'https://is4-ssl.mzstatic.com/image/thumb/Z40zNrxqwOkG-CGQ_uyDrw/200x50.png',
     genere: 'Documentary',
-    description: '  Unknown. Unexplained. Unbelievable. Until now.',
+    description: 'Unknown. Unexplained. Unbelievable. Until now.',
     button: 'Stream now',
     streamLink:
       'https://tv.apple.com/us/show/prehistoric-planet/umc.cmc.4lh4bmztauvkooqz400akxav?itscg=10000&itsct=atv-0-tv_ovp-carousel-apl-200528',
   },
   {
+    name:'loot',
     image: `https://is2-ssl.mzstatic.com/image/thumb/Features112/v4/62/9b/7e/629b7ea2-03c4-c116-8c34-95e5bd335bd4/300af61f-d084-44f9-91c5-f172266e6bfb.png/735x1590.jpg`,
     showTime: 'Coming 6.24',
     logo: 'https://is1-ssl.mzstatic.com/image/thumb/W5qC3foN5hN0610sXWedLg/200x50.png',

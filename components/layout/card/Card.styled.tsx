@@ -6,27 +6,19 @@ export const Wrapper = styled.div`
   padding: 0 0.5rem;
   height: 250px;
 `
-type CardProps = {
-  image: string
-}
+
 export const ImageCard = styled(AnimationOnScroll)`
   border-radius: 1rem;
-  /* position: relative; */
   margin-top: 7rem;
   width: 400px;
   height: 200px;
-  background-image: url(${({ image }: CardProps) => image});
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  overflow: hidden;
+  position: relative;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 
   &:hover {
     background-color: black;
@@ -37,7 +29,16 @@ export const ImageCard = styled(AnimationOnScroll)`
   }
 `
 
+export const CardImg = styled.img`
+   object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+  position: absolute,
+`
+
 export const ButtonWrapper = styled.div`
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -49,6 +50,7 @@ export const ButtonWrapper = styled.div`
 
 export const Button = styled.a`
   background-color: var(--white);
+  
   color: var(--darkblack);
   font-size: 14px;
   font-weight: 700;

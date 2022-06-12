@@ -16,7 +16,6 @@ export const Card = styled(AnimationOnScroll)`
   height: 500px;
   background-image: url(${({ image }: CardProps) => image});
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

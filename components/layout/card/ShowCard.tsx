@@ -14,6 +14,7 @@ import {
 import styles from '@/styles/Home.module.scss'
 
 type CardType = {
+  name:string,
   image: string
   showTime?: string
   logo: string
@@ -24,6 +25,7 @@ type CardType = {
 }
 
 const ShowCard = ({
+  name,
   image,
   showTime,
   logo,
@@ -43,7 +45,7 @@ const ShowCard = ({
         <TitleWrapper id="title">
           <div>
             <ShowTime>{showTime}</ShowTime>
-            <Logo src={logo} />
+            <Logo src={logo} alt={name}/>
           </div>
         </TitleWrapper>
 

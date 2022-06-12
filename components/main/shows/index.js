@@ -46,6 +46,7 @@ const Shows = () => {
           return (
             <ShowCard
               key={index}
+              name={value.name}
               image={value.image}
               logo={value.logo}
               showTime={value.showTime}
@@ -67,6 +68,7 @@ const Shows = () => {
             return (
               <Card
                 key={index}
+                name={value.name}
                 image={value.image}
                 button={value.button}
                 streamLink={value.streamLink}
@@ -85,6 +87,7 @@ const Shows = () => {
             return (
               <Card
                 key={index}
+                name={value.name}
                 image={value.image}
                 button={value.button}
                 streamLink={value.streamLink}

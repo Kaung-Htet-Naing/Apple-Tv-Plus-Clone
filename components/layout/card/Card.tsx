@@ -1,7 +1,9 @@
-import { Button, ButtonWrapper, ImageCard, Wrapper } from './Card.styled'
+import { Button, ButtonWrapper, CardImg, ImageCard, Wrapper } from './Card.styled'
 import styles from '@/styles/Home.module.scss'
+import Image from 'next/image'
 
 type CardType = {
+  name: string
   image: string
   showTime?: string
   logo: string
@@ -11,15 +13,15 @@ type CardType = {
   streamLink: string
 }
 
-const Card = ({ image, button, streamLink }: CardType) => {
+const Card = ({name, image, button, streamLink }: CardType) => {
   return (
     <Wrapper>
       <ImageCard
         animateIn={styles.animate_slide_top}
         animateOut={styles.animate_slide_top_reverse}
         offset={0}
-        image={image}
       >
+        <CardImg src={image} alt={name} />
         <ButtonWrapper>
           <Button href={streamLink}>{button}</Button>
         </ButtonWrapper>
