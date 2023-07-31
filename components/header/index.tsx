@@ -1,5 +1,4 @@
 import {
-  Container,
   Heading,
   HeadingWrapper,
   Info,

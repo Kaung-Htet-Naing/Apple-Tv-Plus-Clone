@@ -11,9 +11,9 @@ type CardType = {
   name: string
   image: string
   showTime?: string
-  logo: string
-  genere: string
-  description: string
+  logo?: string
+  genere?: string
+  description?: string
   button: string
   streamLink: string
 }

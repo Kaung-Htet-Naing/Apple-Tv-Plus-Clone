@@ -6,21 +6,15 @@ type ContainerProps = {
   height: number
 }
 
-export const ImageContainer = styled.div`
+export const VideoContainer = styled.div`
   position: absolute;
   top: 0;
   right: 0;
   z-index: -10;
   width: 100%;
   height: 100%;
-  background-image: url(/assets/backgrounds/ted_lasso_bg.jpeg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  object-fit: cover;
+  min-height: 100vh;
 `
 
 export const InfoContainer = styled.div`
@@ -89,11 +83,18 @@ export const StreamNow = styled.a`
   }
 `
 
-export const WatchOn = styled.p`
+export const WatchOn = styled.div`
   font-size: 19px;
   font-weight: 600;
   margin: 90px 0;
+  display: flex;
+  justify-items: center;
+  justify-contents: center;
+  gap: 10px;
   color: var(--white);
+  p {
+    margin: auto 0;
+  }
 `
 
 export const InfoWrapper = styled.div`

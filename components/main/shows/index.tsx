@@ -5,12 +5,15 @@ import 'react-multi-carousel/lib/styles.css'
 import { shows } from 'data/data'
 import Marquee, { Motion, randomIntFromInterval } from 'react-marquee-slider'
 import Card from '@/components/layout/card/Card'
-import { useState } from 'react'
 import { Button, ButtonWrapper } from './index.styled'
+import { useState } from 'react'
+
+const firstMarqueeSpeed = 50
+const secondMarqueeSpeed = 60
 
 const Shows = () => {
-  const [firstMarqueeSpeed, setFirstMarqueeSpeed] = useState(30)
-  const [secondMarqueeSpeed, setSecondMarqueeSpeed] = useState(40)
+  const [isHoveredFirstMarquee, setIsHoveredFirstMarquee] = useState(true)
+  const [isHoveredSecondMarquee, setIsHoveredSecondMarquee] = useState(true)
 
   const responsive = {
     desktop: {
@@ -57,9 +60,12 @@ const Shows = () => {
           )
         })}
       </Carousel>
-      <div>
+      <div
+        onMouseEnter={() => setIsHoveredFirstMarquee(false)}
+        onMouseLeave={() => setIsHoveredFirstMarquee(true)}
+      >
         <Marquee
-          velocity={firstMarqueeSpeed}
+          velocity={isHoveredFirstMarquee ? firstMarqueeSpeed : 0}
           minScale={0.7}
           resetAfterTries={200}
         >
@@ -76,9 +82,12 @@ const Shows = () => {
           })}
         </Marquee>
       </div>
-      <div>
+      <div
+        onMouseEnter={() => setIsHoveredSecondMarquee(false)}
+        onMouseLeave={() => setIsHoveredSecondMarquee(true)}
+      >
         <Marquee
-          velocity={secondMarqueeSpeed}
+          velocity={isHoveredSecondMarquee ? secondMarqueeSpeed : 0}
           minScale={0.7}
           resetAfterTries={200}
         >

@@ -1,6 +1,6 @@
 import useWindowDimensions from '@/hooks/useWindowDimensions'
 import {
-  ImageContainer,
+  VideoContainer,
   Info,
   InfoContainer,
   InfoWrapper,
@@ -13,25 +13,46 @@ import styles from '@/styles/Home.module.scss'
 import { OfferWrapper } from './offer/index.styled'
 import Offer from './offer'
 import { offers, infos } from 'data/data'
-
+import Image from 'next/image'
+import AppleLogo from '/public/image_2023_07_31T12_23_53_729Z.png'
 const Main = () => {
   const { height }: any = useWindowDimensions()
   return (
     <>
-      <ImageContainer />
-      <InfoContainer height={height}>
-        <div>
-          <Title>
-            All Apple Originals.
-            <br />
-            Only On Apple TV+.
-          </Title>
-          <StreamNow href="https://tv.apple.com/channel/tvs.sbd.4000?itscg=10000&itsct=atv-tv_op-nav_wch-ctr-210111">
-            Stream Now
-          </StreamNow>
-          <WatchOn>Watch on the Apple TV app</WatchOn>
-        </div>
-      </InfoContainer>
+      <VideoContainer>
+        <video autoPlay loop muted>
+          <source
+            src="https://www.apple.com/105/media/us/apple-tv-plus/2022/4114721e-12d2-4260-87c4-678589d5f804/anim/supercut/large.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </VideoContainer>
+      {height && (
+        <InfoContainer height={height}>
+          <div>
+            <Title>
+              All Apple Originals.
+              <br />
+              Only On Apple TV+.
+            </Title>
+            <StreamNow href="https://tv.apple.com/channel/tvs.sbd.4000?itscg=10000&itsct=atv-tv_op-nav_wch-ctr-210111">
+              Stream Now
+            </StreamNow>
+            <WatchOn>
+              <p>Watch on the </p>
+              <Image
+                src={AppleLogo}
+                alt="apple-tv-icon"
+                width={40}
+                height={40}
+                style={{ padding: '2px' }}
+              />
+              <p>app</p>
+            </WatchOn>
+          </div>
+        </InfoContainer>
+      )}
       <InfoWrapper>
         {infos.map(({ name }, index) => {
           return (
