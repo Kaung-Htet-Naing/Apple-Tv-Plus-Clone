@@ -1,19 +1,18 @@
+'use client'
 import { device } from 'consts/ScreenSize'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
 import styled from 'styled-components'
-
-// const { innerWidth: width, innerHeight: height } = window
 
 type ContainerProps = {
   height: number
 }
 
 export const ImageContainer = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
+  right: 0;
   z-index: -10;
   width: 100%;
-  height: ${({ height }: ContainerProps) => height}px;
+  height: 100%;
   background-image: url(/assets/backgrounds/ted_lasso_bg.jpeg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -25,7 +24,7 @@ export const ImageContainer = styled.div`
 `
 
 export const InfoContainer = styled.div`
-  height: ${({ height }: ContainerProps) => height * 0.8}px;
+  height: ${({ height }: ContainerProps) => height * 0.9}px;
   display: flex;
   flex-direction: column;
 
@@ -109,20 +108,20 @@ export const Info = styled.p`
 
   @media ${device.desktop} {
     font-size: 48px;
-    padding: 20px 200px;
+    padding: 0px 200px;
   }
 
   @media ${device.laptop} {
     font-size: 48px;
-    padding: 20px 50px;
+    padding: 10px 50px;
   }
 
   @media ${device.tablet} {
     font-size: 48px;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   @media ${device.phone} {
     font-size: 28px;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 `

@@ -24,7 +24,7 @@ const Header = () => {
       <HeadingWrapper>
         <Heading>
           <Title>Apple TV+</Title>
-          <StreamButton href="/tv">Stream now</StreamButton>
+          <StreamButton href="/indexpage">Stream now</StreamButton>
         </Heading>
       </HeadingWrapper>
       <InfomationWrapper>

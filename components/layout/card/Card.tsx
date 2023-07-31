@@ -1,6 +1,11 @@
-import { Button, ButtonWrapper, CardImg, ImageCard, Wrapper } from './Card.styled'
+import {
+  Button,
+  ButtonWrapper,
+  CardImg,
+  ImageCard,
+  Wrapper,
+} from './Card.styled'
 import styles from '@/styles/Home.module.scss'
-import Image from 'next/image'
 
 type CardType = {
   name: string
@@ -13,7 +18,7 @@ type CardType = {
   streamLink: string
 }
 
-const Card = ({name, image, button, streamLink }: CardType) => {
+const Card = ({ name, image, button, streamLink }: CardType) => {
   return (
     <Wrapper>
       <ImageCard

@@ -1,3 +1,4 @@
+'use client'
 import { device } from 'consts/ScreenSize'
 import styled from 'styled-components'
 

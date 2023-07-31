@@ -1,8 +1,5 @@
-import { device } from 'consts/ScreenSize'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
+'use client'
 import styled from 'styled-components'
-
-// const { innerWidth: width, innerHeight: height } = window
 
 export const ButtonWrapper = styled.div`
   display: flex;

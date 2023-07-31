@@ -15,16 +15,16 @@ import Offer from './offer'
 import { offers, infos } from 'data/data'
 
 const Main = () => {
-  const { height, width }: any = useWindowDimensions()
+  const { height }: any = useWindowDimensions()
   return (
     <>
-      <ImageContainer height={height} />
+      <ImageContainer />
       <InfoContainer height={height}>
         <div>
           <Title>
             All Apple Originals.
             <br />
-            Only On Apple TV+
+            Only On Apple TV+.
           </Title>
           <StreamNow href="https://tv.apple.com/channel/tvs.sbd.4000?itscg=10000&itsct=atv-tv_op-nav_wch-ctr-210111">
             Stream Now
@@ -45,7 +45,6 @@ const Main = () => {
             </AnimationOnScroll>
           )
         })}
-
         <OfferWrapper>
           {offers.map((value, index) => {
             return (

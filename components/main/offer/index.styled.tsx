@@ -1,3 +1,4 @@
+'use client'
 import { device } from 'consts/ScreenSize'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import styled from 'styled-components'

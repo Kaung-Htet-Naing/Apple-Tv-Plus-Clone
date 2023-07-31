@@ -1,10 +1,9 @@
-import { device } from 'consts/ScreenSize'
+'use client'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   padding: 0 0.5rem;
-  height: 250px;
 `
 
 export const ImageCard = styled(AnimationOnScroll)`
@@ -18,7 +17,6 @@ export const ImageCard = styled(AnimationOnScroll)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 
   &:hover {
     background-color: black;
@@ -30,10 +28,10 @@ export const ImageCard = styled(AnimationOnScroll)`
 `
 
 export const CardImg = styled.img`
-   object-fit: cover;
-    min-width: 100%;
-    min-height: 100%;
-  position: absolute,
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
 `
 
 export const ButtonWrapper = styled.div`
@@ -50,7 +48,7 @@ export const ButtonWrapper = styled.div`
 
 export const Button = styled.a`
   background-color: var(--white);
-  
+
   color: var(--darkblack);
   font-size: 14px;
   font-weight: 700;

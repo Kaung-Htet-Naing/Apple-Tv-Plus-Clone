@@ -1,7 +1,7 @@
+'use client'
 import ShowCard from '@/components/layout/card/ShowCard'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
-import times from 'lodash/times'
 import { shows } from 'data/data'
 import Marquee, { Motion, randomIntFromInterval } from 'react-marquee-slider'
 import Card from '@/components/layout/card/Card'
@@ -40,7 +40,6 @@ const Shows = () => {
         transitionDuration={1000}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
-        // partialVisible={true}
       >
         {shows.map((value, index) => {
           return (
