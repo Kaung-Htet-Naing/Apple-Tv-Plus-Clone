@@ -65,8 +65,11 @@ const Shows = () => {
         onMouseLeave={() => setIsHoveredFirstMarquee(true)}
       >
         <Marquee
+          direction={'rtl'}
+          scatterRandomly={false}
+          onFinish={() => {}}
+          onInit={() => {}}
           velocity={isHoveredFirstMarquee ? firstMarqueeSpeed : 0}
-          minScale={0.7}
           resetAfterTries={200}
         >
           {shows.map((value, index) => {
@@ -88,7 +91,10 @@ const Shows = () => {
       >
         <Marquee
           velocity={isHoveredSecondMarquee ? secondMarqueeSpeed : 0}
-          minScale={0.7}
+          direction={'rtl'}
+          scatterRandomly={false}
+          onFinish={() => {}}
+          onInit={() => {}}
           resetAfterTries={200}
         >
           {shows.map((value, index) => {
