@@ -11,7 +11,6 @@ export const VideoContainer = styled.div`
   top: 0;
   right: 0;
   z-index: -10;
-  width: 100%;
   height: 100%;
   object-fit: cover;
   min-height: 100vh;
