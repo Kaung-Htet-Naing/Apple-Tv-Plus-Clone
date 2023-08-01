@@ -1,5 +1,6 @@
 'use client'
 import { device } from 'consts/ScreenSize'
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 type ContainerProps = {
@@ -14,6 +15,8 @@ export const VideoContainer = styled.div`
   height: 100%;
   object-fit: cover;
   min-height: 100vh;
+
+  overflow: hidden;
 `
 
 export const InfoContainer = styled.div`
@@ -41,7 +44,7 @@ export const InfoContainer = styled.div`
   }
 `
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   font-weight: 700;
   color: var(--white);
 
@@ -73,8 +76,6 @@ export const StreamNow = styled.a`
   color: var(--darkblack);
   border-radius: 5rem;
   text-decoration: none;
-
-  transition: all 0.2s ease-in-out;
 
   &:hover {
     opacity: 0.5;

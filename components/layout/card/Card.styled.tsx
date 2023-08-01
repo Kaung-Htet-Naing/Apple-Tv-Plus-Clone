@@ -1,6 +1,7 @@
 'use client'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import styled from 'styled-components'
+import { device } from 'consts/ScreenSize'
 
 export const Wrapper = styled.div`
   padding: 0 0.5rem;
@@ -24,6 +25,14 @@ export const ImageCard = styled(AnimationOnScroll)`
     > * {
       visibility: visible;
     }
+  }
+  @media ${device.phone} {
+    width: 200px;
+    height: 100px;
+  }
+  @media ${device.tablet} {
+    width: 300px;
+    height: 150px;
   }
 `
 

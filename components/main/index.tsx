@@ -15,6 +15,7 @@ import Offer from './offer'
 import { offers, infos } from 'data/data'
 import Image from 'next/image'
 import AppleLogo from '/public/image_2023_07_31T12_23_53_729Z.png'
+import { motion } from 'framer-motion'
 const Main = () => {
   const { height }: any = useWindowDimensions()
   return (
@@ -31,25 +32,41 @@ const Main = () => {
       {height && (
         <InfoContainer height={height}>
           <div>
-            <Title>
+            <Title
+              as={motion.p}
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+              }}
+            >
               All Apple Originals.
               <br />
               Only On Apple TV+.
             </Title>
-            <StreamNow href="https://tv.apple.com/channel/tvs.sbd.4000?itscg=10000&itsct=atv-tv_op-nav_wch-ctr-210111">
-              Stream Now
-            </StreamNow>
-            <WatchOn>
-              <p>Watch on the </p>
-              <Image
-                src={AppleLogo}
-                alt="apple-tv-icon"
-                width={40}
-                height={40}
-                style={{ padding: '2px' }}
-              />
-              <p>app</p>
-            </WatchOn>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                delay: 1,
+              }}
+            >
+              <StreamNow href="https://tv.apple.com/channel/tvs.sbd.4000?itscg=10000&itsct=atv-tv_op-nav_wch-ctr-210111">
+                Stream Now
+              </StreamNow>
+              <WatchOn>
+                <p>Watch on the </p>
+                <Image
+                  src={AppleLogo}
+                  alt="apple-tv-icon"
+                  width={40}
+                  height={40}
+                  style={{ padding: '2px' }}
+                />
+                <p>app</p>
+              </WatchOn>
+            </motion.div>
           </div>
         </InfoContainer>
       )}

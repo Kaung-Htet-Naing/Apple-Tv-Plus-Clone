@@ -38,9 +38,9 @@ const Shows = () => {
         responsive={responsive}
         infinite={true}
         centerMode={true}
-        autoPlay={false}
+        autoPlay={true}
         customTransition="transform 1000ms ease-in-out"
-        transitionDuration={1000}
+        transitionDuration={3000}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
       >
